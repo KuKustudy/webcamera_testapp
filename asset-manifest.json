@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/webcamera_testapp/static/css/main.1f156eb8.css",
+    "main.js": "/webcamera_testapp/static/js/main.c0fb0820.js",
+    "index.html": "/webcamera_testapp/index.html",
+    "main.1f156eb8.css.map": "/webcamera_testapp/static/css/main.1f156eb8.css.map",
+    "main.c0fb0820.js.map": "/webcamera_testapp/static/js/main.c0fb0820.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.1f156eb8.css",
+    "static/js/main.c0fb0820.js"
+  ]
+}
