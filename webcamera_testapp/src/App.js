@@ -7,12 +7,21 @@ function App() {
 
   const [hasPhoto, setHasPhoto] = useState(false);
 
+
+
   // a function defined to display real time video
   const getVideo = () => {
+
+    const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+
+    const constraints = {
+      video: isMobile
+        ? { facingMode: { exact: "environment" } } // back camera on mobile
+        : { facingMode: "user" } // default webcam on desktop
+    };
+
     navigator.mediaDevices
-      .getUserMedia({
-        video: {width:1920, height:1080}
-      })
+      .getUserMedia(constraints)
       .then(stream => {
 
         let video = videoRef.current;
@@ -65,7 +74,7 @@ function App() {
   return (
     <div className="App">
       <div className="camera">
-        <video ref={videoRef}></video>
+        <video ref={videoRef} autoPlay muted playsInline></video>
         <button onClick={takePhoto}>
           SNAP!
         </button>
